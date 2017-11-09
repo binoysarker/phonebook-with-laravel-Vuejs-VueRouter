@@ -13,6 +13,7 @@
     <vue-header></vue-header>
     <div class="container">
         <router-view></router-view>
+
     </div>
     <vue-footer></vue-footer>
 

@@ -13,7 +13,14 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::resource('/','PhonebookController');
-Route::get('/{name}',function (){
+Route::get('/',function (){
+    return view('welcome');
+});
+
+Route::resource('/phonebook','PhonebookController');
+
+Route::get('/phonebook/{name}',function (){
    return redirect('/');
 })->where('name','[A-Za-z]+');
+
+Route::get('/getData','PhonebookController@getData');
